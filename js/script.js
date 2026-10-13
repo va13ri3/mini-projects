@@ -1,5 +1,3 @@
-var subTotal = document.getElementById("formGroupExampleInput").valueAsNumber;
-var percentage = document.getElementById("formGroupExampleInput2").valueAsNumber;
 var hours = document.getElementById("formGroupExampleInput3").valueAsNumber;
 var hourRate = document.getElementById("formGroupExampleInput4").valueAsNumber;
 var pointsEarned = document.getElementById("formGroupExampleInput5").valueAsNumber;
@@ -9,26 +7,19 @@ var pricePerGallon = document.getElementById("formGroupExampleInput8").valueAsNu
 var tipOutput = document.getElementById("tipOutput")
 var totalOutput = document.getElementById("totalOutput");
 
-document.getElementById("btn1").addEventListener("click", function() {
+var button1 = document.getElementById("btn1");
+
+button1.addEventListener("click", function() {
  
+    const subTotal = document.getElementById("formGroupExampleInput").valueAsNumber;
+    const percentage = document.getElementById("formGroupExampleInput2").valueAsNumber;
 
 
-    let subTotal = document.getElementById("formGroupExampleInput").valueAsNumber;
-    let percentage = document.getElementById("formGroupExampleInput2").valueAsNumber;
     let tipAmount = subTotal * percentage;   
-
-
-
-   
-
- 
     let totalBill = subTotal + tipAmount;
 
 
-   
-   
-   
-    tipOutput.innerHTML = tipAmount.value;
+    tipOutput.innerHTML = tipAmount;
     totalOutput.innerHTML = totalBill;
 });
 
